@@ -57,15 +57,15 @@ function clicked(id) {
 
             if(winnerInfo["status"] == -1){
                 matchFinished = true;
-                document.getElementById(statusID).innerHTML = "Deu velha!";
+                document.getElementById(statusID).innerHTML = "[Empate]";
                 console.log("MATCH FINISHED: [VELHA]");
             }else if(winnerInfo["status"] == 1){
                 matchFinished = true;
-                document.getElementById(statusID).innerHTML = "O Player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>] ganhou";
+                document.getElementById(statusID).innerHTML = "[O Player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>] ganhou]";
                 console.log("MATCH FINISHED: [PLAYER 1] WON");
             }else if(winnerInfo["status"] == 2){
                 matchFinished = true;
-                document.getElementById(statusID).innerHTML = "O Player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>] ganhou";
+                document.getElementById(statusID).innerHTML = "[O Player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>] ganhou]";
                 console.log("MATCH FINISHED: [PLAYER 2] WON");
             }else{
                 console.log("SETING NEXT PLAYER'S TURN");
@@ -85,7 +85,7 @@ function clicked(id) {
 function updateNext(id, turn) {
     var color = (turn == 0)?"#15c828":"#1681fa";
 
-    document.getElementById(id).innerHTML = "Vez do player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>]";
+    document.getElementById(id).innerHTML = "[Vez do player [<span id='next' style='color:"+color+"'>"+turnToLetter(turn)+"</span>]]";
 }
 
 
